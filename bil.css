@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background-color: #0a0a0a;
+    color: #ffffff;
+  }
+  
+  /* NAVBAR */
+  .navbar {
+    background-color:#292929;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+  }
+  
+  .logo img {
+    height: 60px;
+  }
+  
+  .menu {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .menu a:hover {
+    color: #000000;
+  }
+  
+  .search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .search input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .search button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000000;
+    color: #fffdfd;
+    cursor: pointer;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    background-color: #000000;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  
+  .hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  .slider-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+  }
+  
+  .slider {
+    display: none;
+    animation: fade 1s ease-in-out;
+    position: relative;
+  }
+  
+  .slider.active {
+    display: block;
+  }
+  
+  .slider img {
+    width: 1920px;
+    height: 1080px;
+    object-fit: cover;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  
+  .slider h2 {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 32px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 20px;
+    border-radius: 8px;
+  }
+  
+  .hero button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #032539;
+    color: #ececec;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* GAMES SECTION */
+  .Games-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    background-color: #0a0a0a;
+  }
+  
+  .game {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .game:hover {
+    transform: scale(1.05);
+    }
+  
+  .game img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .game figcaption {
+    color: #ccc;
+    margin: 5px 0;
+  }
+  
+  .game button {
+    margin: 5px;
+    padding: 8px 12px;
+    background-color: #000000;
+    color: #eeecec;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .game button:hover {
+      color: #1d1414;
+    }
+  
+  
+  /* FOOTER */
+  footer {
+    background-color: #292929;
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .menu {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+      margin: 10px 0;
+    }
+  
+    .search {
+      flex-direction: column;
+      width: 100%;
+      padding: 10px 0;
+    }
+  
+    .search input {
+      width: 80%;
+    }
+  
+    .Games-container {
+      grid-template-columns: 1fr;
+      padding: 20px;
+    }
+  
+    .slider h2 {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .hero h1 {
+      font-size: 24px;
+    }
+  
+    .slider h2 {
+      font-size: 16px;
+    }
+  
+    .game figcaption {
+      font-size: 14px;
+    }
+  
+    .game button {
+      font-size: 14px;
+      padding: 6px 10px;
+    }
+  
+    .search input {
+      width: 100%;
+    }
+  }
+  
+  @keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  
