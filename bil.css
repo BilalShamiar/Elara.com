@@ -178,6 +178,8 @@ footer {
 }
 
 /* RESPONSIVE DESIGN */
+
+/* Tablets & small laptops */
 @media (max-width: 1024px) {
   .slider img {
     width: 100%;
@@ -185,38 +187,31 @@ footer {
   }
 }
 
+/* Tablets & large phones */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
     align-items: center;
-    padding: 10px 15px;
-    text-align: center;
-  }
-
-  .logo img {
-    height: 50px;
-    margin-bottom: 10px;
+    padding: 15px;
   }
 
   .menu {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10px;
+    flex-direction: column;
     width: 100%;
+    align-items: center;
+    gap: 10px;
     margin-top: 10px;
   }
 
   .menu a {
     font-size: 16px;
-    padding: 5px 10px;
   }
 
   .search {
     flex-direction: column;
     width: 100%;
     padding: 10px 0;
-    margin-top: 10px;
+    margin-top: 15px;
   }
 
   .search input {
@@ -238,8 +233,9 @@ footer {
   }
 
   .Games-container {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     padding: 20px;
+    gap: 15px;
   }
 
   .game {
@@ -251,6 +247,7 @@ footer {
   }
 }
 
+/* Small Phones - Show 3 games per row */
 @media (max-width: 480px) {
   .hero h1 {
     font-size: 22px;
@@ -275,19 +272,13 @@ footer {
   }
 
   .Games-container {
-    grid-template-columns: 1fr;
-    gap: 15px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
     padding: 10px;
   }
 
   .game {
     padding: 10px;
-  }
-
-  .game img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
   }
 
   .navbar {
@@ -296,15 +287,14 @@ footer {
 
   .menu a {
     font-size: 14px;
-    padding: 4px 8px;
   }
 
   footer {
     font-size: 14px;
-    padding: 15px;
   }
 }
 
+/* FADE ANIMATION */
 @keyframes fade {
   from {
     opacity: 0;
